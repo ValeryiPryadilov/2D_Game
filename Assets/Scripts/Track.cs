@@ -1,5 +1,6 @@
 public enum Track
 {
     walk,
-    run
+    run,
+    jump
 }

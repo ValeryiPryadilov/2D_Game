@@ -20,6 +20,7 @@ public class Start_Point : MonoBehaviour
     
     private SpriteAnimator _spriteAnimator;
 
+    private MainHeroWalker _mainHeroWalker;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class Start_Point : MonoBehaviour
         
 
         _spriteAnimator = new SpriteAnimator(_spriteAnimationConfig);
-        _spriteAnimator.StartAnimation(_characterView.SpriteRenderer, Track.walk, true, 10);
+        _mainHeroWalker = new MainHeroWalker(_characterView, _spriteAnimator);
     }
 
     private void Update()
@@ -35,6 +36,8 @@ public class Start_Point : MonoBehaviour
         _paralaxManager.Update();
         
         _spriteAnimator.Update();
+
+        _mainHeroWalker.Update();
     }
 
     private void FixedUpdate()

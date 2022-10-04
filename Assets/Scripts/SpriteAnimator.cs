@@ -1,9 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteAnimator : IDisposable
+public class SpriteAnimator
 {
     private SpriteAnimationsConfig _config;
     private Dictionary<SpriteRenderer, CustomAnimation> _activeAnimations = new Dictionary<SpriteRenderer, CustomAnimation>();

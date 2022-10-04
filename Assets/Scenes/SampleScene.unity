@@ -8590,6 +8590,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 259570338}
+  _walkSpeed: 1
+  _animationsSpeed: 3
+  _jumpStartSpeed: 2
+  _movingTresh: 0.1
+  _flyTresh: 0.3
+  _groundLevel: 0.3
+  _acceleration: -10
 --- !u!1 &259903839
 GameObject:
   m_ObjectHideFlags: 0
