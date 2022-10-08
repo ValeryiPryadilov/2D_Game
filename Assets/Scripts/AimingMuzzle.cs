@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class AimingMuzzle : MonoBehaviour
+public class AimingMuzzle
 {
-    [SerializeField] Transform _muzzleTransform;
-    [SerializeField] Transform _aimTransform;
+    private Transform _muzzleTransform;
+    private Transform _aimTransform;
 
     public AimingMuzzle(Transform muzzleTransform, Transform aimTransform)
     {
@@ -11,12 +11,12 @@ public class AimingMuzzle : MonoBehaviour
         _aimTransform = aimTransform;
     }
 
-    private void Update()
+    public void Update()
     {
         var dir = _aimTransform.position - _muzzleTransform.position;
-        var angle = Vector3.Angle(Vector3.left, dir);
-        var axis = Vector3.Cross(Vector3.left, dir);
+        var angle = Vector3.Angle(-Vector3.right, dir);
+        var axis = Vector3.Cross(-Vector3.right, dir);
+
         _muzzleTransform.rotation = Quaternion.AngleAxis(angle, axis);
     }
-
 }

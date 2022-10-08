@@ -2,5 +2,6 @@ public enum Track
 {
     walk,
     run,
-    jump
+    jump,
+    coin_rotation
 }
